@@ -96,6 +96,9 @@ The user should be able to see the list of tasks, add new ones, delete existing 
         const li = document.createElement("li");
         li.innerText = input.value;
         listcontainer.appendChild(li);
+        li.addEventListener("click", (event) => {
+          li.remove();
+        });
       };
 
       /* EXERCISE 6:
@@ -131,7 +134,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
         let arr = [];
         for (let lis of addedLi) {
           let lisContent = lis.innerText;
-          arr = arr.concat(lisContent);
+          arr.push(lisContent);
         }
         console.log(arr);
       };
@@ -164,13 +167,6 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       /* EXERCISE 10:
                 Attach an eventListener to each new task you create. When the task receives the click it should be removed (only the clicked task should disappear)
       */
-
-      const clicktask
-
-      const addedLi = document.querySelectorAll("li");
-      for (let lis of addedLi) {
-        lis.style.color = "green";
-      }
 
       /* EXERCISE 11:
                Create a function "bubbleSort()" which sorts the task list alphabetically using the bubble sort algorithm
